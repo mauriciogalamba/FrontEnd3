@@ -1,10 +1,17 @@
 .img {
-    
-    width: 200px;
+  width: 200px;
 }
 
-.card{
-    margin: 15px;
-    border: 1px solid gray;
-    border-radius: 5px;
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+  margin: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.card:hover{
+    border: 1px solid rgb(193, 206, 250);
 }

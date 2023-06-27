@@ -1,8 +1,7 @@
-import styles from "./Footer.module.css";
-
 const Footer = () => {
+  
   return (
-    <footer className={styles.foot}>
+    <footer className="footer">
       <p>Powered by</p>
       <img className="logo" src="/img/DH.png" alt="DH-logo" />
     </footer>
