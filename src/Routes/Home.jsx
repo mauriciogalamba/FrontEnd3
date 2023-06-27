@@ -1,22 +1,28 @@
+import { useEffect, useState } from "react"
 import Card from "../Components/Card"
 import styles from './Home.module.css'
 
 function List()  {
-    let array =[]
-    for (let index = 0; index<10; index++)
-    {
-        array.push({n:"nombre "+index, u:"Usuario "+ index, i:index})
-    }
-    
+  const [odon, setOdon] = useState([])
+  
+  async function getOdon(){
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
+    const o = await res.json()
+    setOdon(o)
+  }
+
+  useEffect(()=>{
+    getOdon()
+  },[])
+   
       return (
       <>
       <div className={styles.list}>
-          {array.map((e) =>(
-            <Card name= {e.n}
-              username={e.u}
-              id={e.i}
-              key={e.i} />
-            
+          {odon.map((o) =>(
+            <Card name= {o.name}
+              username={o.username}
+              id={o.id}
+              key={o.id} />
         ))}
       </div>
       </>
