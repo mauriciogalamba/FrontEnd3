@@ -1,8 +1,5 @@
-function Contacto(){
-    return(
-        <>
-        </>
-    )
+function Contacto() {
+  return <></>;
 }
 
-export default Contacto
+export default Contacto;

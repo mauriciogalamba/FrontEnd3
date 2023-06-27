@@ -1,8 +1,5 @@
-function Favoritos(){
-    return(
-        <>
-        </>
-    )
+function Favoritos() {
+  return <></>;
 }
 
-export default Favoritos
+export default Favoritos;
