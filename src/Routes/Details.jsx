@@ -18,6 +18,9 @@ function Details() {
     getOdon();
   }, [params]);
   return (
+      /*Podria rellenar las celdas con algun bucle (map o foreach, incluso los encabezados),
+      pero como es un solo registro y no voy a mostrar todas las keys:values
+      lo hice manualmemte, HTML básico */
     <div className={styles.cont}>
       <h3>Detalles del Odontologo</h3>
       <table className={styles.table}>

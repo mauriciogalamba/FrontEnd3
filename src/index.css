@@ -30,6 +30,7 @@ a {
   margin: 5px;
   cursor: pointer;
 }
+
 a:hover {
   color: rgb(136, 136, 136);
 }

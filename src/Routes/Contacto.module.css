@@ -3,6 +3,16 @@
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 100px;
-  margin: 0 auto;
+  height: 130px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.container{
+  text-align: center;
+}
+
+.error{
+  color: red;
 }
