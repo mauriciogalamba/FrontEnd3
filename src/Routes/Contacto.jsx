@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./Contacto.module.css";
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 function Contacto() {
+  const themes = useContext(ThemeContext);
   const [error, setError] = useState(false);
   const [nombre, setNombre] = useState("");
   const [msj, setMsj] = useState("");
@@ -39,7 +41,7 @@ function Contacto() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container +" "+ themes.theme}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <label htmlFor="nombre">Nombre: </label>
         <input

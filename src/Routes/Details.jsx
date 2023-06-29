@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./Details.module.css";
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 function Details() {
+  const themes = useContext(ThemeContext);
   const params = useParams();
   const [odon, setOdon] = useState([]);
 
@@ -21,7 +23,7 @@ function Details() {
     /*Podria rellenar las celdas con algun bucle (map o foreach, incluso los encabezados),
       pero como es un solo registro y no voy a mostrar todas las keys:values
       lo hice manualmemte, HTML básico */
-    <div className={styles.cont}>
+    <div className={styles.cont + " "+ themes.theme}>
       <h3>Detalles del Odontologo</h3>
       <table className={styles.table}>
         <thead>

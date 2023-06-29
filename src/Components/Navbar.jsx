@@ -6,11 +6,11 @@ const Navbar = () => {
   const themes = useContext(ThemeContext);
 
   return (
-    <nav className="bar">
+    <nav className={"bar "+ themes.theme}>
       <Link to="/"> Home</Link>
       <Link to="/favoritos">Favoritos</Link>
       <Link to="contacto">Contacto</Link>
-      <button onClick={themes.toggleTheme}>Change theme</button>
+      <button onClick={themes.toggleTheme} className={themes.theme}>Change theme</button>
     </nav>
   );
 };

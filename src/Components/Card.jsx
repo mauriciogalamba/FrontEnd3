@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../Contexts/ThemeContext";
 
 const Card = ({ name, username, id }) => {
+  const themes = useContext(ThemeContext);
   const [isFav, SetIsFav] = useState(
     JSON.parse(localStorage.getItem("fav"))
     ?.filter(f => f.id == id).length>0)
@@ -24,13 +26,11 @@ const Card = ({ name, username, id }) => {
         
       SetIsFav(false)
     }
-
-    // Aqui iria la logica para agregar la Card en el localStorage
   }
 
   return (
     <>
-      <div className={styles.card} key={id}>
+      <div className={styles.card + " " +themes.theme} key={id}>
         <Link to={`/details/${id}`} style={{ display: "contents" }}>
           <div>
             <img
@@ -44,8 +44,8 @@ const Card = ({ name, username, id }) => {
           </div>
         </Link>
 
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">
+
+        <button onClick={addFav} className={styles.button+" "+themes.theme }>
           {isFav?"Quitar de favoritos":"Agregar a favoritos"}
         </button>
       </div>

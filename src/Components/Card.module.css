@@ -1,5 +1,6 @@
 .img {
   width: 200px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .card {
@@ -9,7 +10,11 @@
   width: 200px;
   margin: 15px;
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.button {
+  border-radius: 0px 0px 10px 10px;
 }
 
 .card:hover{

@@ -43,7 +43,6 @@ footer {
   position: relative;
   bottom: 0;
   height: 40px;
-  margin-top: 2rem;
   background-color: lightgray;
 }
 
@@ -70,9 +69,10 @@ footer > p {
 }
 
 .dark {
-  background-color: #12121296;
+  background-color: #121212d7;
   color: white;
 }
+
 .dark > a {
   color: white;
 }
