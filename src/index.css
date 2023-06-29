@@ -47,6 +47,18 @@ footer {
   background-color: lightgray;
 }
 
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.fav{
+  text-align: center;
+  padding: 40px; 
+}
+
 footer > img {
   width: 200px;
   margin: 0;

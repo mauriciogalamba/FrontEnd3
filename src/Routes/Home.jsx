@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Card from "../Components/Card";
-import styles from "./Home.module.css";
 
 function List() {
   const [odon, setOdon] = useState([]);
@@ -17,7 +16,7 @@ function List() {
 
   return (
     <>
-      <div className={styles.list}>
+      <div className="list">
         {odon.map((o) => (
           <Card name={o.name} username={o.username} id={o.id} key={o.id} />
         ))}
